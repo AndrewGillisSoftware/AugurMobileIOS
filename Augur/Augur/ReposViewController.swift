@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ReposViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		CB096DED267F84AB0029788F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB096DEC267F84AB0029788F /* AppDelegate.swift */; };
 		CB096DEF267F84AB0029788F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB096DEE267F84AB0029788F /* SceneDelegate.swift */; };
-		CB096DF1267F84AB0029788F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB096DF0267F84AB0029788F /* ViewController.swift */; };
+		CB096DF1267F84AB0029788F /* ReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB096DF0267F84AB0029788F /* ReposViewController.swift */; };
 		CB096DF4267F84AB0029788F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB096DF2267F84AB0029788F /* Main.storyboard */; };
 		CB096DF7267F84AB0029788F /* Augur.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB096DF5267F84AB0029788F /* Augur.xcdatamodeld */; };
 		CB096DF9267F84AC0029788F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB096DF8267F84AC0029788F /* Assets.xcassets */; };
@@ -39,7 +39,7 @@
 		CB096DE9267F84AB0029788F /* Augur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Augur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB096DEC267F84AB0029788F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB096DEE267F84AB0029788F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CB096DF0267F84AB0029788F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CB096DF0267F84AB0029788F /* ReposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposViewController.swift; sourceTree = "<group>"; };
 		CB096DF3267F84AB0029788F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB096DF6267F84AB0029788F /* Augur.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Augur.xcdatamodel; sourceTree = "<group>"; };
 		CB096DF8267F84AC0029788F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 			children = (
 				CB096DEC267F84AB0029788F /* AppDelegate.swift */,
 				CB096DEE267F84AB0029788F /* SceneDelegate.swift */,
-				CB096DF0267F84AB0029788F /* ViewController.swift */,
+				CB096DF0267F84AB0029788F /* ReposViewController.swift */,
 				CB096DF2267F84AB0029788F /* Main.storyboard */,
 				CB096DF8267F84AC0029788F /* Assets.xcassets */,
 				CB096DFA267F84AC0029788F /* LaunchScreen.storyboard */,
@@ -261,7 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB096DF1267F84AB0029788F /* ViewController.swift in Sources */,
+				CB096DF1267F84AB0029788F /* ReposViewController.swift in Sources */,
 				CB096DED267F84AB0029788F /* AppDelegate.swift in Sources */,
 				CB096DF7267F84AB0029788F /* Augur.xcdatamodeld in Sources */,
 				CB096DEF267F84AB0029788F /* SceneDelegate.swift in Sources */,
