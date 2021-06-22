@@ -43,6 +43,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="V3c-tm-vS1" kind="show" id="1uq-QK-7af"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -61,10 +64,29 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Repositories" id="g7n-UI-hvB"/>
+                    <connections>
+                        <outlet property="reposTableView" destination="A19-b4-XkW" id="Eb5-Ud-ue0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="715-mk-t79" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="483" y="110"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LO2-fd-fBu">
+            <objects>
+                <viewController id="V3c-tm-vS1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mmh-2n-Al0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qiC-wK-jzS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Y1e-3u-vc8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ypl-Mk-UW5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1351" y="110"/>
         </scene>
     </scenes>
     <resources>

@@ -16,6 +16,7 @@
 		CB096DFC267F84AC0029788F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB096DFA267F84AC0029788F /* LaunchScreen.storyboard */; };
 		CB096E07267F84AC0029788F /* AugurTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB096E06267F84AC0029788F /* AugurTests.swift */; };
 		CB096E12267F84AC0029788F /* AugurUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB096E11267F84AC0029788F /* AugurUITests.swift */; };
+		CB096E23267F90270029788F /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB096E22267F90270029788F /* Repositories.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		CB096E0D267F84AC0029788F /* AugurUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AugurUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB096E11267F84AC0029788F /* AugurUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AugurUITests.swift; sourceTree = "<group>"; };
 		CB096E13267F84AC0029788F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB096E22267F90270029788F /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +103,10 @@
 		CB096DEB267F84AB0029788F /* Augur */ = {
 			isa = PBXGroup;
 			children = (
-				CB096DEC267F84AB0029788F /* AppDelegate.swift */,
-				CB096DEE267F84AB0029788F /* SceneDelegate.swift */,
-				CB096DF0267F84AB0029788F /* ReposViewController.swift */,
-				CB096DF2267F84AB0029788F /* Main.storyboard */,
-				CB096DF8267F84AC0029788F /* Assets.xcassets */,
-				CB096DFA267F84AC0029788F /* LaunchScreen.storyboard */,
 				CB096DFD267F84AC0029788F /* Info.plist */,
-				CB096DF5267F84AB0029788F /* Augur.xcdatamodeld */,
+				CB096E21267F8F9E0029788F /* Controller */,
+				CB096E20267F8F990029788F /* View */,
+				CB096E1F267F8F8F0029788F /* Model */,
 			);
 			path = Augur;
 			sourceTree = "<group>";
@@ -129,6 +127,35 @@
 				CB096E13267F84AC0029788F /* Info.plist */,
 			);
 			path = AugurUITests;
+			sourceTree = "<group>";
+		};
+		CB096E1F267F8F8F0029788F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CB096DF5267F84AB0029788F /* Augur.xcdatamodeld */,
+				CB096E22267F90270029788F /* Repositories.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CB096E20267F8F990029788F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB096DFA267F84AC0029788F /* LaunchScreen.storyboard */,
+				CB096DF2267F84AB0029788F /* Main.storyboard */,
+				CB096DF8267F84AC0029788F /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CB096E21267F8F9E0029788F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CB096DF0267F84AB0029788F /* ReposViewController.swift */,
+				CB096DEC267F84AB0029788F /* AppDelegate.swift */,
+				CB096DEE267F84AB0029788F /* SceneDelegate.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB096DF1267F84AB0029788F /* ReposViewController.swift in Sources */,
+				CB096E23267F90270029788F /* Repositories.swift in Sources */,
 				CB096DED267F84AB0029788F /* AppDelegate.swift in Sources */,
 				CB096DF7267F84AB0029788F /* Augur.xcdatamodeld in Sources */,
 				CB096DEF267F84AB0029788F /* SceneDelegate.swift in Sources */,
@@ -450,7 +478,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = GillisSoftware.Augur;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -469,7 +497,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = GillisSoftware.Augur;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
