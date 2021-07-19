@@ -9,14 +9,22 @@
 /* Begin PBXBuildFile section */
 		CB096DED267F84AB0029788F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB096DEC267F84AB0029788F /* AppDelegate.swift */; };
 		CB096DEF267F84AB0029788F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB096DEE267F84AB0029788F /* SceneDelegate.swift */; };
-		CB096DF1267F84AB0029788F /* ReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB096DF0267F84AB0029788F /* ReposViewController.swift */; };
 		CB096DF4267F84AB0029788F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB096DF2267F84AB0029788F /* Main.storyboard */; };
 		CB096DF9267F84AC0029788F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB096DF8267F84AC0029788F /* Assets.xcassets */; };
 		CB096DFC267F84AC0029788F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB096DFA267F84AC0029788F /* LaunchScreen.storyboard */; };
 		CB096E07267F84AC0029788F /* AugurTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB096E06267F84AC0029788F /* AugurTests.swift */; };
 		CB096E12267F84AC0029788F /* AugurUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB096E11267F84AC0029788F /* AugurUITests.swift */; };
-		CB096E23267F90270029788F /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB096E22267F90270029788F /* Repositories.swift */; };
 		CB829EBE26A512A7005538F0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB829EBD26A512A7005538F0 /* Constants.swift */; };
+		CB829EC026A51665005538F0 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB829EBF26A51665005538F0 /* RepositoriesViewController.swift */; };
+		CB829EC326A51F7D005538F0 /* Augur.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB829EC126A51F7C005538F0 /* Augur.xcdatamodeld */; };
+		CB829EC626A51FAB005538F0 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB829EC426A51FAB005538F0 /* User+CoreDataClass.swift */; };
+		CB829EC726A51FAB005538F0 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB829EC526A51FAB005538F0 /* User+CoreDataProperties.swift */; };
+		CB829ECA26A52F1F005538F0 /* PreloadedData.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB829EC926A52F1F005538F0 /* PreloadedData.plist */; };
+		CB829ECC26A53709005538F0 /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB829ECB26A53709005538F0 /* RewardsViewController.swift */; };
+		CB829ECE26A53750005538F0 /* InstanceSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB829ECD26A53750005538F0 /* InstanceSettingsViewController.swift */; };
+		CB829ED026A5463B005538F0 /* GetGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB829ECF26A5463B005538F0 /* GetGroups.swift */; };
+		CB829ED226A54667005538F0 /* GetAllRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB829ED126A54667005538F0 /* GetAllRepositories.swift */; };
+		CB829ED426A54BBC005538F0 /* GetRepoByGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB829ED326A54BBC005538F0 /* GetRepoByGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +48,6 @@
 		CB096DE9267F84AB0029788F /* Augur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Augur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB096DEC267F84AB0029788F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB096DEE267F84AB0029788F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CB096DF0267F84AB0029788F /* ReposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposViewController.swift; sourceTree = "<group>"; };
 		CB096DF3267F84AB0029788F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB096DF8267F84AC0029788F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB096DFB267F84AC0029788F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,8 +58,17 @@
 		CB096E0D267F84AC0029788F /* AugurUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AugurUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB096E11267F84AC0029788F /* AugurUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AugurUITests.swift; sourceTree = "<group>"; };
 		CB096E13267F84AC0029788F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB096E22267F90270029788F /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
 		CB829EBD26A512A7005538F0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CB829EBF26A51665005538F0 /* RepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
+		CB829EC226A51F7C005538F0 /* Augur.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Augur.xcdatamodel; sourceTree = "<group>"; };
+		CB829EC426A51FAB005538F0 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CB829EC526A51FAB005538F0 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CB829EC926A52F1F005538F0 /* PreloadedData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PreloadedData.plist; sourceTree = "<group>"; };
+		CB829ECB26A53709005538F0 /* RewardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
+		CB829ECD26A53750005538F0 /* InstanceSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceSettingsViewController.swift; sourceTree = "<group>"; };
+		CB829ECF26A5463B005538F0 /* GetGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGroups.swift; sourceTree = "<group>"; };
+		CB829ED126A54667005538F0 /* GetAllRepositories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetAllRepositories.swift; sourceTree = "<group>"; };
+		CB829ED326A54BBC005538F0 /* GetRepoByGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRepoByGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +119,7 @@
 		CB096DEB267F84AB0029788F /* Augur */ = {
 			isa = PBXGroup;
 			children = (
+				CB829EC826A52EE3005538F0 /* Data */,
 				CB096DFD267F84AC0029788F /* Info.plist */,
 				CB096E21267F8F9E0029788F /* Controller */,
 				CB096E20267F8F990029788F /* View */,
@@ -132,8 +149,13 @@
 		CB096E1F267F8F8F0029788F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CB096E22267F90270029788F /* Repositories.swift */,
+				CB829EC426A51FAB005538F0 /* User+CoreDataClass.swift */,
+				CB829EC526A51FAB005538F0 /* User+CoreDataProperties.swift */,
+				CB829EC126A51F7C005538F0 /* Augur.xcdatamodeld */,
+				CB829ED126A54667005538F0 /* GetAllRepositories.swift */,
 				CB829EBD26A512A7005538F0 /* Constants.swift */,
+				CB829ECF26A5463B005538F0 /* GetGroups.swift */,
+				CB829ED326A54BBC005538F0 /* GetRepoByGroup.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -151,11 +173,21 @@
 		CB096E21267F8F9E0029788F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CB096DF0267F84AB0029788F /* ReposViewController.swift */,
 				CB096DEC267F84AB0029788F /* AppDelegate.swift */,
 				CB096DEE267F84AB0029788F /* SceneDelegate.swift */,
+				CB829EBF26A51665005538F0 /* RepositoriesViewController.swift */,
+				CB829ECB26A53709005538F0 /* RewardsViewController.swift */,
+				CB829ECD26A53750005538F0 /* InstanceSettingsViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		CB829EC826A52EE3005538F0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CB829EC926A52F1F005538F0 /* PreloadedData.plist */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB829ECA26A52F1F005538F0 /* PreloadedData.plist in Resources */,
 				CB096DFC267F84AC0029788F /* LaunchScreen.storyboard in Resources */,
 				CB096DF9267F84AC0029788F /* Assets.xcassets in Resources */,
 				CB096DF4267F84AB0029788F /* Main.storyboard in Resources */,
@@ -289,10 +322,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB829EBE26A512A7005538F0 /* Constants.swift in Sources */,
-				CB096DF1267F84AB0029788F /* ReposViewController.swift in Sources */,
-				CB096E23267F90270029788F /* Repositories.swift in Sources */,
+				CB829ED426A54BBC005538F0 /* GetRepoByGroup.swift in Sources */,
+				CB829ECE26A53750005538F0 /* InstanceSettingsViewController.swift in Sources */,
+				CB829EC326A51F7D005538F0 /* Augur.xcdatamodeld in Sources */,
 				CB096DED267F84AB0029788F /* AppDelegate.swift in Sources */,
+				CB829ECC26A53709005538F0 /* RewardsViewController.swift in Sources */,
+				CB829EC026A51665005538F0 /* RepositoriesViewController.swift in Sources */,
+				CB829EC626A51FAB005538F0 /* User+CoreDataClass.swift in Sources */,
+				CB829ED226A54667005538F0 /* GetAllRepositories.swift in Sources */,
 				CB096DEF267F84AB0029788F /* SceneDelegate.swift in Sources */,
+				CB829EC726A51FAB005538F0 /* User+CoreDataProperties.swift in Sources */,
+				CB829ED026A5463B005538F0 /* GetGroups.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,6 +665,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CB829EC126A51F7C005538F0 /* Augur.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CB829EC226A51F7C005538F0 /* Augur.xcdatamodel */,
+			);
+			currentVersion = CB829EC226A51F7C005538F0 /* Augur.xcdatamodel */;
+			path = Augur.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CB096DE1267F84AA0029788F /* Project object */;
 }

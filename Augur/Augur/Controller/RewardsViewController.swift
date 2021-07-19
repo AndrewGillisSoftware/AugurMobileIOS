@@ -1,29 +1,49 @@
-//
-//  ViewController.swift
-//  Augur
-//
-//  Created by Andrew Gillis on 6/20/21.
-//
-
 import UIKit
+import CoreData
 
-class ReposViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+class RewardsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
-    @IBOutlet weak var reposTableView: UITableView!
-    let repoURLString = "http://augur.chaoss.io/api/unstable/repos"
+
+    @IBOutlet weak var repoInvestTableView: UITableView!
+    @IBOutlet weak var pointLabel: UILabel!
+    @IBOutlet weak var repoInvestSearchBar: UISearchBar!
     
+    var coreDataContext : NSManagedObjectContext?
     var repositories:[Repository]?
+    var user:User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        coreDataContext = GET_CONTEXT()
         loadData()
     }
     
-    //Server Down UNTESTED
     func loadData()
     {
-        guard let repoURL = URL(string: repoURLString) else
+        //Get Context
+        coreDataContext = GET_CONTEXT()
+        
+        //get repo string
+        let fetch: NSFetchRequest<User> = User.fetchRequest()
+        
+        do
+        {
+            self.user = try coreDataContext?.fetch(fetch)[0]
+        }
+        catch
+        {
+            print("Could Not Found Repos URL in Rewards")
+        }
+        
+        //Get Repos from URL String
+        var url : String = user?.instanceURL ?? ""
+        url.append(GET_REPO_URL_STRING)
+        
+        //Set Label for Points
+        self.pointLabel.text = String(user?.points ?? 0)
+        
+        guard let repoURL = URL(string: url) else
         {
             print("Bad URL")
             return
@@ -38,7 +58,7 @@ class ReposViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     DispatchQueue.main.async {
                         // update our UI
                         self.repositories = decodedResponse
-                        self.reposTableView.reloadData()
+                        self.repoInvestTableView.reloadData()
                         
                     }
 
@@ -51,6 +71,13 @@ class ReposViewController: UIViewController, UITableViewDelegate, UITableViewDat
             print("Fetch failed: \(error?.localizedDescription ?? "Unknown error")")
             
         }.resume()
+    }
+
+    @IBAction func getMorePoints(_ sender: Any)
+    {
+        var i:Int = Int(pointLabel.text ?? "0") ?? 0
+        i += 1
+        self.pointLabel.text = String(i)
     }
     
     //Only one section per view
@@ -66,12 +93,17 @@ class ReposViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = reposTableView.dequeueReusableCell(withIdentifier: "repoCell",for: indexPath)
+        let cell = repoInvestTableView.dequeueReusableCell(withIdentifier: "investRepoCell",for: indexPath)
         
         //Cast Cell and Fill Data Here If NEEDED
         cell.textLabel?.text = repositories?[indexPath.row].repo_name
         
         return cell
+    }
+    
+    func searchBarShouldReturn(_ UISearchBar: UISearchBar) -> Bool {
+        repoInvestSearchBar.resignFirstResponder()
+        return true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
@@ -82,6 +114,4 @@ class ReposViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 print("Critical Segue Error")
         }
     }
-    
 }
-

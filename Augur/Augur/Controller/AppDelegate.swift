@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        preloadData()
         return true
     }
 
@@ -33,6 +34,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     // MARK: - Core Data stack
+    
+    //Pre fill Core Data
+    private func preloadData()
+    {
+        let preloadedDataKey = "didPreloadData"
+        
+        let userDefaults = UserDefaults.standard
+        
+        if userDefaults.bool(forKey: preloadedDataKey) == false
+        {
+            guard let urlPath = Bundle.main.url(forResource: "PreloadedData", withExtension: "plist") else{
+                return
+            }
+            
+            let backgroundContext = persistentContainer.newBackgroundContext()
+            persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
+            
+            backgroundContext.perform
+            {
+                if let arrayContents = NSArray(contentsOf: urlPath) as? [String]
+                {
+                    let user = User(context: backgroundContext)
+                    
+                    do
+                    {
+                        //Set Zero Points
+                        user.points = 0
+                        //Set Instance
+                        user.instanceURL = arrayContents[0]
+                        
+                        try backgroundContext.save()
+                        
+                        //FLAG AS SET IN CORE DATA
+                        userDefaults.set(true, forKey: preloadedDataKey)
+                    }
+                    catch
+                    {
+                        print(error.localizedDescription)
+                    }
+                }
+            }
+        }
+    }
 
     lazy var persistentContainer: NSPersistentContainer = {
         /*
