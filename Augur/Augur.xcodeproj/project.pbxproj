@@ -11,12 +11,12 @@
 		CB096DEF267F84AB0029788F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB096DEE267F84AB0029788F /* SceneDelegate.swift */; };
 		CB096DF1267F84AB0029788F /* ReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB096DF0267F84AB0029788F /* ReposViewController.swift */; };
 		CB096DF4267F84AB0029788F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB096DF2267F84AB0029788F /* Main.storyboard */; };
-		CB096DF7267F84AB0029788F /* Augur.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB096DF5267F84AB0029788F /* Augur.xcdatamodeld */; };
 		CB096DF9267F84AC0029788F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB096DF8267F84AC0029788F /* Assets.xcassets */; };
 		CB096DFC267F84AC0029788F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB096DFA267F84AC0029788F /* LaunchScreen.storyboard */; };
 		CB096E07267F84AC0029788F /* AugurTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB096E06267F84AC0029788F /* AugurTests.swift */; };
 		CB096E12267F84AC0029788F /* AugurUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB096E11267F84AC0029788F /* AugurUITests.swift */; };
 		CB096E23267F90270029788F /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB096E22267F90270029788F /* Repositories.swift */; };
+		CB829EBE26A512A7005538F0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB829EBD26A512A7005538F0 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +42,6 @@
 		CB096DEE267F84AB0029788F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CB096DF0267F84AB0029788F /* ReposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposViewController.swift; sourceTree = "<group>"; };
 		CB096DF3267F84AB0029788F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CB096DF6267F84AB0029788F /* Augur.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Augur.xcdatamodel; sourceTree = "<group>"; };
 		CB096DF8267F84AC0029788F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB096DFB267F84AC0029788F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB096DFD267F84AC0029788F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,6 +52,7 @@
 		CB096E11267F84AC0029788F /* AugurUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AugurUITests.swift; sourceTree = "<group>"; };
 		CB096E13267F84AC0029788F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB096E22267F90270029788F /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
+		CB829EBD26A512A7005538F0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,8 +132,8 @@
 		CB096E1F267F8F8F0029788F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CB096DF5267F84AB0029788F /* Augur.xcdatamodeld */,
 				CB096E22267F90270029788F /* Repositories.swift */,
+				CB829EBD26A512A7005538F0 /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -288,10 +288,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB829EBE26A512A7005538F0 /* Constants.swift in Sources */,
 				CB096DF1267F84AB0029788F /* ReposViewController.swift in Sources */,
 				CB096E23267F90270029788F /* Repositories.swift in Sources */,
 				CB096DED267F84AB0029788F /* AppDelegate.swift in Sources */,
-				CB096DF7267F84AB0029788F /* Augur.xcdatamodeld in Sources */,
 				CB096DEF267F84AB0029788F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -625,19 +625,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		CB096DF5267F84AB0029788F /* Augur.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				CB096DF6267F84AB0029788F /* Augur.xcdatamodel */,
-			);
-			currentVersion = CB096DF6267F84AB0029788F /* Augur.xcdatamodel */;
-			path = Augur.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = CB096DE1267F84AA0029788F /* Project object */;
 }
