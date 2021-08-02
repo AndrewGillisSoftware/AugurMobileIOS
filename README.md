@@ -18,6 +18,7 @@
 13. Note if this was on App Store it wouldn’t be this complicated.
 14. App store instructions: TBD
 
+
 Summary of the Project
 
 My project was to create a native Augur IOS application as a proof of concept and explore native technology versus a dynamic application using flutter. My objectives were to Explore UI Development, API Consumption with the codable interface, Data persistence through IOS Core Data, and gamification design of the Augur repositories. All of these objectives have been explored and completed.
